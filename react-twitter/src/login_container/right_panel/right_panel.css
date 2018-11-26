@@ -1,0 +1,27 @@
+.InfoPanelContainer {
+  flex: 1;
+  margin-top: -6rem;
+  text-align: center;
+  color: white;
+}
+
+.LoginInputContainer {
+  flex: 1;
+}
+
+.LoginButton {
+  border-radius: 100px;
+  padding: 0.5rem;
+  border: 1px rgb(91, 190, 255) solid;
+  color: rgb(91, 190, 255);
+}
+
+.SignUp {
+  background-color: rgb(91, 190, 255);
+  color: white;
+  border: 1px white solid;
+}
+
+.LoginButton:focus {
+  outline: none;
+}

@@ -1,0 +1,38 @@
+#panel-container {
+  background-color: rgba(50, 170, 245, 0.9);
+  width: 50%;
+  height: 100vh;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  display: flex;
+}
+.login-input {
+  border: 1px lightgray solid;
+  padding: 0.5rem;
+  margin: 5px;
+}
+
+.login-input:focus {
+  border: 0.7px gray solid;
+  outline: none;
+}
+
+.login-input-container {
+  display: inline-flex;
+}
+
+.login-submit {
+  border-radius: 100px;
+  padding: 0.5rem;
+  border: 1px rgb(91, 190, 255) solid;
+  color: rgb(91, 190, 255);
+}
+
+.login-submit:focus {
+  outline: none;
+}
