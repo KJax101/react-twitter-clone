@@ -6,11 +6,10 @@ export default class LoginInputs extends Component {
     super(props);
     this.state = {
       // We set a default value for username. We can change this to whatever you want.
-      username: "test user",
+      username: "",
       // The state values below are here just as examples. We aren't actually using them.
       password: "",
-      savedUsers: ["user@user.com", "user2@user.com"],
-      savedUserNames: { name1: "test123" }
+      success: false
     };
   }
 
@@ -45,7 +44,7 @@ export default class LoginInputs extends Component {
   );
 
   logInput = () => {
-    console.log(this.state.username, this.state.password);
+    console.log("signing up user: ", this.state.username, this.state.password);
   };
   render() {
     return (
