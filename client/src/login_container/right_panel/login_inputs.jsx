@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./right_panel.css";
+import API from "../../utils/API";
 
 export default class LoginInputs extends Component {
   constructor(props) {
@@ -45,6 +46,16 @@ export default class LoginInputs extends Component {
 
   logInput = () => {
     console.log("signing up user: ", this.state.username, this.state.password);
+
+    // e.preventDefault();
+    API
+      .register({ username: this.state.username, password: this.state.password })
+    // .then(res => {
+    //   console.log(res);
+    //   this.setState({ success: res })
+
+    // })
+    // .catch(err => console.log(err.response.data));
   };
   render() {
     return (
