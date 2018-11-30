@@ -27,10 +27,23 @@
 }
 
 .login-submit {
-  border-radius: 100px;
-  padding: 0.5rem;
+  /* border-radius: 100px;
+  padding: 1rem;
   border: 1px rgb(91, 190, 255) solid;
   color: rgb(91, 190, 255);
+  font-size: 20px */
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  color: rgb(91, 190, 255);
+  
 }
 
 .login-submit:focus {

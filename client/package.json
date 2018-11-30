@@ -1,9 +1,12 @@
 {
   "name": "clone_tweeter",
   "version": "0.1.0",
+  "proxy": "http://localhost:3001/",
   "private": true,
   "dependencies": {
+    "eslint-loader": "^2.1.1",
     "react": "^16.6.3",
+    "react-bootstrap-modal": "^4.2.0",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
   },

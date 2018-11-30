@@ -32,7 +32,7 @@ export default class LoginInputs extends Component {
   };
 
   // This we used just do display the html input we are rendering below
-  renderInput = (name, type) => (
+  renderInput = (name, type, placeholder) => (
     <div className="login-input-container">
       <input
         className="login-input"
@@ -40,6 +40,7 @@ export default class LoginInputs extends Component {
         type={type}
         value={this.state[name]}
         onChange={event => this.handleChange(event.target.value, name)}
+        placeholder={placeholder}
       />
     </div>
   );
@@ -50,21 +51,21 @@ export default class LoginInputs extends Component {
     // e.preventDefault();
     API
       .register({ username: this.state.username, password: this.state.password })
-    // .then(res => {
-    //   console.log(res);
-    //   this.setState({ success: res })
+      .then(res => {
+        console.log(res);
+        this.setState({ success: res })
 
-    // })
-    // .catch(err => console.log(err.response.data));
+      })
+      .catch(err => console.log(err.response.data));
   };
   render() {
     return (
       <div className="LoginInputContainer">
         {/* We're rendering the input here with a few arguments */}
-        {this.renderInput("username", "text")}
-        {this.renderInput("password", "password")}
+        {this.renderInput("username", "text", "Username or Email")}
+        {this.renderInput("password", "password", "Password")}
         <button className="login-submit" onClick={() => this.logInput()}>
-          Submit
+          Login
         </button>
       </div>
     );

@@ -9,11 +9,22 @@
   flex: 1;
 }
 
+.login-input-container {
+  margin-top: 20px;
+
+}
+
 .LoginButton {
   border-radius: 100px;
-  padding: 0.5rem;
+  padding: .5rem;
   border: 1px rgb(91, 190, 255) solid;
   color: rgb(91, 190, 255);
+  padding-right: 125px;
+  padding-left: 125px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px;
+  display: block;
 }
 
 .SignUp {

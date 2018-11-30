@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./right_panel.css";
+import ModalExample from "./ModalExample.jsx"
 
 export default class InfoPanel extends Component {
   render() {
@@ -9,8 +10,9 @@ export default class InfoPanel extends Component {
         <div className="loginButtons">
           <h3 className="contentHeader">Join Today</h3>
           <div>
-            <button className="LoginButton">Log In</button>
             <button className="LoginButton SignUp">Sign Up</button>
+            <button className="LoginButton">Log In</button>
+            <ModalExample />
           </div>
         </div>
       </div>
