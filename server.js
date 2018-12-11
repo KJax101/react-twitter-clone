@@ -9,7 +9,7 @@ const LocalStrategy = require('passport-local').Strategy;
 
 // Import routes
 const routes = require('./routes');
-// port lcoation pointer
+// port location pointer
 const PORT = process.env.PORT || 3001;
 
 // Set up Express and defining everything we will be using as 'app.use'
@@ -30,13 +30,14 @@ app.use(express.static('client/build'));
 app.use(routes);
 
 // Set up passport to authenticate
-// const User = require('./models/user');
-// passport.use(new LocalStrategy(User.authenticate()));
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
+const User = require('./models/user');
+
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mern-auth-demo');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/twitter-clone-db');
 
 // Start the API server
 app.listen(PORT, function () {

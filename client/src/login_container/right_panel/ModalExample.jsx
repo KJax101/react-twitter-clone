@@ -1,11 +1,17 @@
 import React, { Component } from "react";
+import Modal from "react-bootstrap-modal";
 
-var Modal = require('react-bootstrap-modal')
+export class ModalExample extends React.Component {
+  constructor(props) {
+    super(props)
 
-class ModalExample extends React.Component {
+    this.state = {
+      open: false
+    }
+  }
 
   render() {
-    let closeModal = () => this.setState({ open: false })
+    const closeModal = () => this.setState({ open: false })
 
     let saveAndClose = () => {
       // api.saveData()
