@@ -1,6 +1,6 @@
 import React from "react";
 import PanelContainer from "./panel_container";
-import LoginInputs from "./right_panel/login_inputs";
+import LoginInputs from "./right_panel/LoginInputs";
 import LeftPanelComponent from "./left_panel/left_panel";
 import "./login.css";
 import InfoPanel from "./right_panel/right_panel";
