@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import LoginContainer from "./login_container/login_container";
+import { BrowserRouter } from 'react-router-dom';
+
+import Main from "./Main";
 
 class App extends Component {
   render() {
-    return <LoginContainer />;
+    return (
+      <BrowserRouter>
+        <Main />
+      </BrowserRouter>
+    );
   }
 }
-
 export default App;
