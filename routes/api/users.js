@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const passport = require('passport');
 const usersController = require('../../controllers/usersController');
+const User = require('../../models/user');
 
 // Matches with "/api/user/login"
 // restful API's - let's you perform CRUD operations as opposes to non-restful API, which are just GET
@@ -34,17 +35,35 @@ router
     res.json(false);
   })
 
+router.route('/:id')
+  .get(async function (req, res) {    
+    const results = await User.find({"id": req.params.id})
+    res.send(results)
+  })
+
+router.route('/:id')
+  .post(async function (req, res) {
+    const newUser = new User({"id": "ken", "email": "ken@gmail.com", "password": "abc123", "username": 'ken1'})
+    console.log(newUser)
+    await newUser.save()
+    res.send("i did it, i added to the db")
+  })
+
+
+
 // Matches with "/api/user/:id"
 // CRUD Operations
-router
-  .route('/:id')
-  .get(usersController.findById)
-  .put(usersController.update)
-  .delete(usersController.remove);
+// router
+//   .route('/:id')
+//   .get(usersController.findById)
+//   .put(usersController.update)
+//   .delete(usersController.remove);
+
+
 
 // register a new user ("/api/user/register")
-router
-  .route('/register')
-  .post(usersController.register);
+// router
+//   .route('/register')
+//   .post(usersController.register);
 
 module.exports = router;

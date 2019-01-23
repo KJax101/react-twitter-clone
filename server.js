@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
+require('dotenv').config();
+
 // Import routes
 const routes = require('./routes');
 // port location pointer
@@ -37,7 +39,8 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/twitter-clone-db');
+console.log(process.env.MONGODB_URI, '~~~~~~~~~~~~~~~~')
+mongoose.connect(process.env.MONGODB_URI);
 
 // Start the API server
 app.listen(PORT, function () {
